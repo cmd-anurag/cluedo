@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public partial class Board : TileMapLayer
 {
@@ -9,7 +10,7 @@ public partial class Board : TileMapLayer
 	public override void _Ready()
 	{
 		player = new List<Sprite2D>();
-		player.Add(GetNode<Sprite2D>("../Player");)
+		player.Add(GetNode<Sprite2D>("../Player"));
 	}
 	public override void _Input(InputEvent @event)
 	{
@@ -18,8 +19,9 @@ public partial class Board : TileMapLayer
 		{
 			_target = GetGlobalMousePosition();
 			GD.Print(LocalToMap(ToLocal(_target)));
-			f
-			.Position = ToGlobal(MapToLocal(LocalToMap(ToLocal(_target))));
+			// f
+			player[0].Position = ToGlobal(MapToLocal(LocalToMap(ToLocal(_target))));
+			 
 		}
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
