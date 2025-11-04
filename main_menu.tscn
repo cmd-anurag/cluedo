@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8xom0r251w4f"]
+
+[ext_resource type="StyleBox" uid="uid://ru7pewb2dvc0" path="res://normal_button.tres" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://doo5ligqmq82i" path="res://main_menu.gd" id="1_glbon"]
+[ext_resource type="Texture2D" uid="uid://uee1g3n4ldw7" path="res://clue-board-game-layout.webp" id="1_jix8l"]
+[ext_resource type="StyleBox" uid="uid://s46ggb5mt6am" path="res://pressed_button.tres" id="2_jix8l"]
+[ext_resource type="StyleBox" uid="uid://54jj7sw2tri5" path="res://hover_button.tres" id="3_glbon"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = ExtResource("1_jix8l")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+modulate_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlkkf"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_glbon")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -237.0
+offset_right = 87.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_group_ = true
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_fu7sn")
+theme_override_styles/pressed = ExtResource("2_jix8l")
+theme_override_styles/hover = ExtResource("3_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nlkkf")
+text = "Start Game"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_fu7sn")
+theme_override_styles/pressed = ExtResource("2_jix8l")
+theme_override_styles/hover = ExtResource("3_glbon")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nlkkf")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -41.5
+offset_right = 100.5
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 96
+text = "Cluedo"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
