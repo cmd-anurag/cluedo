@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cluedo"
-run/main_scene="uid://d28jw10tkoas5"
+run/main_scene="uid://c8xom0r251w4f"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
