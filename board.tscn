@@ -1,8 +1,14 @@
-[gd_scene load_steps=6 format=4 uid="uid://d28jw10tkoas5"]
+[gd_scene load_steps=8 format=4 uid="uid://d28jw10tkoas5"]
 
+[ext_resource type="Texture2D" uid="uid://m3rgu44qsug4" path="res://tiles/highlighted_cell.png" id="1_jqgjh"]
 [ext_resource type="Texture2D" uid="uid://32e7y7kg6c2o" path="res://tiles/cell.png" id="1_p0ybc"]
 [ext_resource type="Script" uid="uid://b4wxg0cygchqm" path="res://main_board.gd" id="2_psm7c"]
 [ext_resource type="PackedScene" uid="uid://dulb1lttgabf2" path="res://player_blue.tscn" id="3_8l818"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vf5bc"]
+texture = ExtResource("1_jqgjh")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_psm7c"]
 texture = ExtResource("1_p0ybc")
@@ -12,6 +18,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_8l818"]
 tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_psm7c")
+sources/0 = SubResource("TileSetAtlasSource_vf5bc")
 
 [node name="Board" type="Node2D"]
 
