@@ -10,19 +10,25 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
-run/main_scene="res://node_2d.tscn"
-config/features=PackedStringArray("4.3", "C#", "Forward Plus")
+config/name="Cluedo"
+run/main_scene="uid://d28jw10tkoas5"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[dotnet]
+[display]
 
-project/assembly_name="New Game Project"
+window/size/viewport_width=800
+window/size/viewport_height=800
 
 [input]
 
-click={
-"deadzone": 0.5,
+mouse_left_click={
+"deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
