@@ -2,6 +2,7 @@ extends TileMapLayer
 
 var player : Sprite2D
 var target : Vector2
+var target2 : Vector2
 var destinations: Array
 
 func _ready() -> void:
@@ -35,8 +36,6 @@ func _input(event: InputEvent) -> void:
 			var atlasCoords = Vector2i(0, 0)
 			set_cell(destination, 0, atlasCoords);
 			print(destination)
-
-			
 
 func generatePaths(path: Array, current_cell: Vector2i, visited: Array, all_paths: Array) -> void:
 	path.append(current_cell)
