@@ -36,26 +36,6 @@ func _input(event: InputEvent) -> void:
 			var atlasCoords = Vector2i(0, 0)
 			set_cell(destination, 0, atlasCoords);
 			print(destination)
-	elif(event.is_action_pressed("scroll_down")):
-		target = to_local(get_global_mouse_position())
-		$"../../BoardView".scale.x -= 0.1;
-		$"../../BoardView".scale.y -= 0.1;
-		print($"../../BoardView".offset)
-		target2 = to_local(get_global_mouse_position())
-		$"../../BoardView".offset.x -= target.x-target2.x;
-		$"../../BoardView".offset.y -= target.y-target2.y;
-		print($"../../BoardView".offset)
-		
-	elif(event.is_action_pressed("Scroll_up")):
-		target = to_local(get_global_mouse_position())
-		$"../../BoardView".scale.x += 0.1;
-		$"../../BoardView".scale.y += 0.1;
-		print($"../../BoardView".offset)
-		target2 = to_local(get_global_mouse_position())
-		$"../../BoardView".offset.x -= target.x-target2.x;
-		$"../../BoardView".offset.y -= target.y-target2.y;
-		print($"../../BoardView".offset)
-			
 
 func generatePaths(path: Array, current_cell: Vector2i, visited: Array, all_paths: Array) -> void:
 	path.append(current_cell)
