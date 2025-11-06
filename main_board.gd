@@ -2,6 +2,8 @@ extends TileMapLayer
 
 var player : Sprite2D
 var target : Vector2
+var target2 : Vector2
+var destinations: Array
 
 func _ready() -> void:
 	player = $"../player_blue"
@@ -16,67 +18,49 @@ func _input(event: InputEvent) -> void:
 
 		var start_cell = local_to_map(to_local(target)) 
 
+		# generate possible paths 
+		var all_paths: Array = []
+		var visited: Array = []
+		
+		# gds does not have a 2d array
+		for y in range(21):
+			visited.append([])
+			for x in range(21):
+				visited[y].append(false)
 
-		var destinations = generate_destinations(start_cell, 5)
-		for cell in destinations:
-			set_cell(cell, 0, Vector2i(0,0))
-			print(cell)
+		generatePaths([], start_cell, visited, all_paths);
+		# print(all_paths);
+		for path in all_paths:
+			var destination = path[-1]
+			# destinations.append(destination)
+			var atlasCoords = Vector2i(0, 0)
+			set_cell(destination, 0, atlasCoords);
+			print(destination)
 
+func generatePaths(path: Array, current_cell: Vector2i, visited: Array, all_paths: Array) -> void:
+	path.append(current_cell)
+	visited[current_cell.y][current_cell.x] = true;
 
+	if path.size() == 4: # CHANGE THIS LATER
+		all_paths.append(path.duplicate())
+		return
+	else:
+		var directions = [
+			Vector2i(0, -1), # north
+			Vector2i(0, 1),  # south
+			Vector2i(1, 0),  # east
+			Vector2i(-1, 0), # west
+		];
 
-func generate_destinations(start: Vector2i, N: int) -> Array:
-	var queue: Array = []
-	var visited := {}
-	var results: Array = []
+		for direction in directions:
+			var next: Vector2i = current_cell + direction
+			if next.x >= 0 and next.y >= 0 and next.x < 21 and next.y < 21 and not visited[next.y][next.x]:
+				generatePaths(path.duplicate(), next, visited, all_paths)
+		
+		visited[current_cell.y][current_cell.x] = false;
 
-	var dirs = [
-		Vector2i(0, -1),
-		Vector2i(0, 1),
-		Vector2i(1, 0),
-		Vector2i(-1, 0),
-	]
-
-	for d in dirs:
-		var nb = start + d
-		if nb.x < 0 or nb.y < 0 or nb.x >= 21 or nb.y >= 21:
-			continue
-
-		var td = get_cell_tile_data(nb)
-		if td == null or not td.get_custom_data("is_walkable"):
-			continue
-
-		visited[nb] = true
-		queue.append({"cell": nb, "depth": 1})
-
-	while queue.size() > 0:
-		var item = queue.pop_front()
-		var cell: Vector2i = item["cell"]
-		var depth: int = item["depth"]
-
-		var td = get_cell_tile_data(cell)
-		var is_door = td.get_custom_data("is_door")
-
-		if is_door:
-			if depth <= N:
-				results.append(cell)
-			continue
-
-		if depth == N:
-			results.append(cell)
-			continue
-
-		for d in dirs:
-			var nb = cell + d
-			if nb.x < 0 or nb.y < 0 or nb.x >= 21 or nb.y >= 21:
-				continue
-			if visited.has(nb):
-				continue
-
-			var data = get_cell_tile_data(nb)
-			if data == null or not data.get_custom_data("is_walkable"):
-				continue
-
-			visited[nb] = true
-			queue.append({"cell": nb, "depth": depth + 1})
-
-	return results
+# func _use_tile_data_runtime_update(coords: Vector2i) -> bool:
+# 	for destination in destinations:
+# 		if(destination.x == coords.x and destination.y == coords.y):
+# 			return 1
+# 	return 0
