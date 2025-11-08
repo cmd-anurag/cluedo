@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://depw103lnbvk5"]
+
+[ext_resource type="PackedScene" uid="uid://d28jw10tkoas5" path="res://board/board.tscn" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://skkda8u67wlk" path="res://game_manager.gd" id="1_smx3j"]
+[ext_resource type="Script" uid="uid://dqowy2ud2jmmy" path="res://turn_manager.gd" id="3_d5upp"]
+[ext_resource type="Script" uid="uid://lowuv2ns8nkk" path="res://player/PlayerController.gd" id="3_o2178"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_smx3j")
+
+[node name="Board" parent="." instance=ExtResource("1_70yv6")]
+script = null
+
+[node name="TurnManager" type="Node" parent="."]
+script = ExtResource("3_d5upp")
+
+[node name="Player1" type="Node2D" parent="."]
+script = ExtResource("3_o2178")
+
+[node name="Player2" type="Node2D" parent="."]
+script = ExtResource("3_o2178")
