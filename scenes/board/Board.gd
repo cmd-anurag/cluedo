@@ -1,6 +1,6 @@
 extends TileMapLayer
 
-@onready var pathFinder = preload("res://board/Pathfinding.gd").new();
+@onready var pathFinder = preload("res://scenes/board/Pathfinding.gd").new();
 signal cell_clicked(cell: Vector2i);
 
 func _input(event: InputEvent) -> void:
