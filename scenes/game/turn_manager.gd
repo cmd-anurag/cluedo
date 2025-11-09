@@ -13,5 +13,5 @@ func next_turn():
 	currentIndex = (currentIndex + 1) % players.size()
 	players[currentIndex].start_turn()
 
-func get_current_player():
+func get_current_player() -> Player:
 	return players[currentIndex]
