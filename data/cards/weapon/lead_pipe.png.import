@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt4e1hlca746x"
-path="res://.godot/imported/WallCorner.png-6043e81b81ee4251aeedfb5bc3727209.ctex"
+uid="uid://dnof0aj5asvl0"
+path="res://.godot/imported/lead_pipe.png-222ff766509e4f4d5e01c098a50018c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/WallCorner.png"
-dest_files=["res://.godot/imported/WallCorner.png-6043e81b81ee4251aeedfb5bc3727209.ctex"]
+source_file="res://data/cards/weapon/lead_pipe.png"
+dest_files=["res://.godot/imported/lead_pipe.png-222ff766509e4f4d5e01c098a50018c0.ctex"]
 
 [params]
 
