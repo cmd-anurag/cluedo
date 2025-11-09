@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m3rgu44qsug4"
-path="res://.godot/imported/highlighted_cell.png-217837f7b566fc12cd2e7ea474b1ddbe.ctex"
+uid="uid://dq3mmvo7nc04b"
+path="res://.godot/imported/dining_room.png-29d7f146d7c2cb57da06aaf418afbca6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/highlighted_cell.png"
-dest_files=["res://.godot/imported/highlighted_cell.png-217837f7b566fc12cd2e7ea474b1ddbe.ctex"]
+source_file="res://data/cards/location/dining_room.png"
+dest_files=["res://.godot/imported/dining_room.png-29d7f146d7c2cb57da06aaf418afbca6.ctex"]
 
 [params]
 
