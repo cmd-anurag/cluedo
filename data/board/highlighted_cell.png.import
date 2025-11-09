@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uee1g3n4ldw7"
-path="res://.godot/imported/clue-board-game-layout.webp-51d7c6678f2d1d2838453d1e1c6f54c3.ctex"
+uid="uid://m3rgu44qsug4"
+path="res://.godot/imported/highlighted_cell.png-da584ae1145b26a54e0aa510b90a9435.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://clue-board-game-layout.webp"
-dest_files=["res://.godot/imported/clue-board-game-layout.webp-51d7c6678f2d1d2838453d1e1c6f54c3.ctex"]
+source_file="res://data/board/highlighted_cell.png"
+dest_files=["res://.godot/imported/highlighted_cell.png-da584ae1145b26a54e0aa510b90a9435.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfc41rhny7tmn"
-path="res://.godot/imported/player.png-641e0735a315dba74482baef2d5c2507.ctex"
+uid="uid://birk5vyvbxf2e"
+path="res://.godot/imported/wrench.png-bb4ee772aa3bdf3ddfddd1c8f69aad38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/player.png"
-dest_files=["res://.godot/imported/player.png-641e0735a315dba74482baef2d5c2507.ctex"]
+source_file="res://data/cards/weapon/wrench.png"
+dest_files=["res://.godot/imported/wrench.png-bb4ee772aa3bdf3ddfddd1c8f69aad38.ctex"]
 
 [params]
 

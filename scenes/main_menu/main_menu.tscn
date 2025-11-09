@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://c8xom0r251w4f"]
 
-[ext_resource type="StyleBox" uid="uid://ru7pewb2dvc0" path="res://normal_button.tres" id="1_fu7sn"]
-[ext_resource type="Script" uid="uid://doo5ligqmq82i" path="res://main_menu.gd" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://uee1g3n4ldw7" path="res://clue-board-game-layout.webp" id="1_jix8l"]
-[ext_resource type="StyleBox" uid="uid://s46ggb5mt6am" path="res://pressed_button.tres" id="2_jix8l"]
-[ext_resource type="StyleBox" uid="uid://54jj7sw2tri5" path="res://hover_button.tres" id="3_glbon"]
+[ext_resource type="StyleBox" uid="uid://ru7pewb2dvc0" path="res://styles/normal_button.tres" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://doo5ligqmq82i" path="res://scenes/main_menu/main_menu.gd" id="1_glbon"]
+[ext_resource type="Texture2D" uid="uid://uee1g3n4ldw7" path="res://data/menu/main_menu_bg.webp" id="1_jix8l"]
+[ext_resource type="StyleBox" uid="uid://s46ggb5mt6am" path="res://styles/pressed_button.tres" id="2_jix8l"]
+[ext_resource type="StyleBox" uid="uid://54jj7sw2tri5" path="res://styles/hover_button.tres" id="3_glbon"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
 texture = ExtResource("1_jix8l")
