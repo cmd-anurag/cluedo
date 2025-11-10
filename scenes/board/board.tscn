@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://m3rgu44qsug4" path="res://data/board/highlighted_cell.png" id="1_jqgjh"]
 [ext_resource type="Texture2D" uid="uid://32e7y7kg6c2o" path="res://data/board/cell.png" id="1_p0ybc"]
 [ext_resource type="Script" uid="uid://bo5ney7ic4662" path="res://scenes/board/camera_2d.gd" id="1_vf5bc"]
-[ext_resource type="Texture2D" uid="uid://clos81tlsl2jg" path="res://data/board/Door.png" id="3_c4ttu"]
+[ext_resource type="Texture2D" uid="uid://clos81tlsl2jg" path="res://data/board/door.png" id="3_c4ttu"]
 [ext_resource type="Texture2D" uid="uid://b2tfayfe457xx" path="res://data/board/outside.png" id="3_vf5bc"]
-[ext_resource type="Texture2D" uid="uid://buvu3wnib84qd" path="res://data/board/Room.png" id="4_mgc1s"]
-[ext_resource type="Texture2D" uid="uid://c16t8w4tojrr6" path="res://data/board/Wall.png" id="6_xhrpu"]
-[ext_resource type="Texture2D" uid="uid://bt4e1hlca746x" path="res://data/board/WallCorner.png" id="7_nk23n"]
+[ext_resource type="Texture2D" uid="uid://buvu3wnib84qd" path="res://data/board/room.png" id="4_mgc1s"]
+[ext_resource type="Texture2D" uid="uid://c16t8w4tojrr6" path="res://data/board/wall.png" id="6_xhrpu"]
+[ext_resource type="Texture2D" uid="uid://bt4e1hlca746x" path="res://data/board/wall_corner.png" id="7_nk23n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vf5bc"]
 texture = ExtResource("1_jqgjh")
