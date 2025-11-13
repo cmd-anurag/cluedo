@@ -33,5 +33,5 @@ func mouse_panning_handler(panning: bool):
 		self.position -= world_delta
 		pan_start_position = current_mouse_position
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	mouse_panning_handler(is_panning)

@@ -1,9 +1,9 @@
 extends Node
 
-func generate_destinations(tilemap: TileMapLayer, start: Vector2i, N: int) -> Array:
+func generate_destinations(tilemap: TileMapLayer, start: Vector2i, N: int) -> Array[Vector2i]:
 	var queue: Array = []
 	var visited := {}
-	var results: Array = []
+	var results: Array[Vector2i] = []
 	var dirs = [Vector2i(0, -1), Vector2i(0, 1), Vector2i(1, 0), Vector2i(-1, 0)]
 
 	for d in dirs:

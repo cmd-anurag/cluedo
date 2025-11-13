@@ -7,6 +7,9 @@ var is_active: bool= false
 var playername: String
 @export var steps: int = 5
 
+func _ready() -> void:
+	add_to_group("players")
+
 func set_sprite_texture(texture: Texture2D):
 	var sprite = get_node("PlayerSprite") as Sprite2D
 	sprite.texture = texture
@@ -20,11 +23,11 @@ func end_turn():
 	print(playername + "turn ended")
 
 
-func on_cell_clicked(board: TileMapLayer, cell: Vector2i):
+func move_to_cell(board: TileMapLayer, cell: Vector2i):
 	if not is_active:
 		return
-	print(playername + " clicked on cell: ", cell)
+	print(playername + " moved to cell: ", cell)
 	var updated_board_position = board.to_global(board.map_to_local(cell))
-	print("Updated board position : ", updated_board_position)
+
 	self.position = updated_board_position
-	board.highlight_destinations(cell, steps)
+	self.current_cell = cell
