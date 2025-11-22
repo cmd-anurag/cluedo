@@ -53,8 +53,7 @@ func _cell_clicked_handler(cell: Vector2i) -> void:
 	
 	selectedPlayer.move_to_cell(board, cell)
 
-	
-	# board.reset_cells(validCells) yet to be implemented
+	board.reset_cells()
 	validCells.clear()
 	selectedPlayer = null
 	next_turn()
