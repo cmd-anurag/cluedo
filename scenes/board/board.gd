@@ -1,6 +1,8 @@
 extends TileMapLayer
 
 @onready var pathFinder = preload("res://scenes/board/pathfinding.gd").new()
+@export var highlight_layer: TileMapLayer;
+
 signal cell_clicked(cell: Vector2i)
 signal player_clicked(player: Player)
 
@@ -19,12 +21,11 @@ func _input(event: InputEvent) -> void:
 func highlight_cells(start_cell: Vector2i, steps: int)-> Array[Vector2i]:
 	var destinations: Array[Vector2i] = pathFinder.generate_destinations(self, start_cell, steps)
 	for cell in destinations:
-		set_cell(cell, 0, Vector2i(0,0))
+		highlight_layer.set_cell(cell, 0, Vector2i(0,0))
 	return destinations
 
-func reset_cells(_cells: Array[Vector2i]):
-	pass
-
+func reset_cells():
+	highlight_layer.clear()
 
 
 # find a more optimized way to do this if it exists
